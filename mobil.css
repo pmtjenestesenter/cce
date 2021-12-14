@@ -1,0 +1,16 @@
+.apm-article-below {
+    background: #fff;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.apm-article-below .teaser .teaser__image {
+    margin: 0;
+}
+
+.apm-article-below img.figure-img {
+    width: 100%;
+    object-fit: contain;
+    background: white;
+}
