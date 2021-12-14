@@ -1,0 +1,28 @@
+<div class="apm-article-below">
+  <h2 class="section-headline">Anbefalt for deg</h2>
+<!--%
+var items = data.response.items;
+for (var i = 0; i < items.length; i++) {
+  var item = items[i];
+  var imgsrc = item.dominantimage.replace('http:', 'https:');
+%-->
+  <article tmp:class="item teaser teaser--article-default">
+    <a tmp:class="teaser-link" tmp:id="{{cX.CCE.clickTracker(item)}}" tmp:href="{{item.url}}" tmp:target="_top">
+      <div class="teaser__image">
+        <figure class="figure fixed-ratio">
+          <img tmp:class="figure-img img-fluid center lazyload" data-src="{{imgsrc}}" data-srcset="">
+        </figure>
+      </div>
+      <div class="teaser__container">
+        <div tmp:class="text-wrapper">
+          <h3 class="teaser__headline">
+            {{item['agm-heading'] || item.title}}<!--% if (item['agm-premium'] == 'true') { %--><i class="d-inline ml-2 fas fa-plus-square icon fill-center white"></i><!--% } %-->
+          </h3>
+        </div>
+      </div>
+    </a>
+  </article>
+<!--%
+}
+%-->
+</div>
