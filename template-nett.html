@@ -1,0 +1,42 @@
+<br>
+<center> <h2 class="section-headline">Mer innhold for deg</h2> </center>
+<br>
+<div class="pmsor-article-below">
+<!--%
+var items = data.response.items;
+for (var i = 0; i < items.length; i++) {
+  var item = items[i];
+%-->
+  <article tmp:class="item teaser teaser--article-default">
+    <a tmp:class="teaser-link" tmp:id="{{cX.CCE.clickTracker(item)}}" tmp:href="{{item.url}}" tmp:target="_top">
+      <div class="teaser__container">
+        <div class="teaser__image">
+      <!--%
+           cX.renderContainedImage({
+           container: { width:  300, height: 169, cssClass: 'thumbnail' },
+           image: { src: item.dominantimage, dimensions: item.dominantimagedimensions },
+           tooWideStrategy: 'fit',
+           tooTallStrategy: 'zoom',
+           tooWideFocusPoint: 0.5,
+           tooTallFocusPoint: 0.2,
+           horizontalAlign: 'center',
+           verticalAlign: 'middle',
+           scaleFactorMax: 100.0,
+           scaleFactorMin: 0.01
+           });
+           %-->
+        </div>
+      <div tmp:class="text-wrapper">
+        <h2 class="piano-headline">
+          {{item['agm-heading'] || item.title}}
+<!--% if (item['agm-premium'] == 'true') { %--><i class="d-inline ml-2 fas fa-plus-square icon fill-center white"></i><!--% } %-->
+        </h2>
+        <br>
+        </div>      
+</div>
+    </a>
+  </article>
+<!--%
+}
+%-->
+</div>
